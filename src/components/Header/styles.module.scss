@@ -1,0 +1,27 @@
+.wrapperImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+}
+
+.title {
+  position: absolute;
+  color: var(--white);
+}
+
+.description {
+  padding: 1.4rem;
+  text-align: center;
+}
+
+.wrapperLink {
+  display: flex;
+  justify-content: center;
+
+  padding: 1.4rem 0;
+}

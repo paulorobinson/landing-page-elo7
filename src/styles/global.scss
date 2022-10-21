@@ -1,0 +1,80 @@
+@font-face {
+  font-family: 'museo_sans';
+  src: url('https://images.elo7.com.br/assets/v3/fonts/museo-sans-100-webfont.woff2')
+    format('woff2');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'museo_sans';
+  src: url('https://images.elo7.com.br/assets/v3/fonts/museo-sans-300-webfont.woff2')
+    format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'museo_sans';
+  src: url('https://images.elo7.com.br/assets/v3/fonts/museo-sans-500-webfont.woff2')
+    format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+:root {
+  --white: #ffffff;
+
+  --gray-100: #f8f8f8;
+  --gray-200: #ddd9d9;
+  --gray-500: #7d7873;
+  --gray-800: #33333c;
+
+  --green: #359c9c;
+
+  --yellow: #eba417;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'museo_sans', sans-serif;
+  background: var(--white);
+  color: var(--gray-500);
+  line-height: 1.4rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+// body,
+// input,
+// textarea,
+// select,
+// button {
+//   font-family: 'museo_sans', sans-serif;
+//   font-size: 1rem;
+//   font-weight: 400;
+// }
+
+// button {
+//   cursor: pointer;
+// }
