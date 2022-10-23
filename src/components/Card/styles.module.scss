@@ -1,0 +1,16 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+.title {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.description {
+  text-align: justify;
+}
