@@ -23,9 +23,7 @@ const Header = () => {
           necessitatibus? Eum similique unde dicta.
         </p>
         <Divider />
-        <div className={styles.wrapperLink}>
-          <Link href="https://elo7.gupy.io/">Vagas em aberto</Link>
-        </div>
+        <Link href="https://elo7.gupy.io/">Vagas em aberto</Link>
       </section>
     </header>
   );
