@@ -11,12 +11,19 @@
   color: var(--green);
   text-transform: uppercase;
   font-weight: bold;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+
+  transition: border-color 0.3s;
 
   span {
     font-size: 0.8rem;
 
-    margin: 0 0.25rem;
+    margin: 0.25rem;
     -webkit-text-stroke-width: thin;
+  }
+
+  &:hover {
+    border-bottom: 2px solid var(--green);
   }
 }
 
