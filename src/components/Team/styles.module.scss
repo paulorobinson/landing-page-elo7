@@ -1,0 +1,34 @@
+.container {
+  background-color: var(--gray-100);
+  padding: 3rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.about {
+  display: flex;
+  gap: 3rem;
+}
+
+.aboutDescription {
+  h1 {
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--yellow);
+  }
+
+  p {
+    padding-top: 2rem;
+  }
+}
+
+.teamImages {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+}
