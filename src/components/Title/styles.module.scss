@@ -1,0 +1,14 @@
+.container {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 2rem 0;
+
+  h1 {
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
