@@ -1,8 +1,8 @@
-import { HTMLProps } from 'react';
+import { HTMLProps, ReactNode } from 'react';
 import styles from './styles.module.scss';
 
 interface TitleProps extends HTMLProps<HTMLHeadingElement> {
-  children: string;
+  children: ReactNode;
   isCenter?: boolean;
 }
 
