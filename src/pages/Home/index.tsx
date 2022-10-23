@@ -3,6 +3,7 @@ import Team from '../../components/Team';
 import Benefits from '../../components/Benefits';
 
 import styles from './styles.module.scss';
+import JobsFooter from '../../components/JobsFooter';
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Header />
       <Team />
       <Benefits />
+      <JobsFooter />
     </main>
   );
 };
