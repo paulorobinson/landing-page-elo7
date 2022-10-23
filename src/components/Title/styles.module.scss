@@ -2,7 +2,6 @@
   width: 100%;
 
   display: flex;
-  justify-content: center;
 
   padding: 2rem 0;
 
@@ -11,4 +10,8 @@
     text-transform: uppercase;
     text-align: center;
   }
+}
+
+.center {
+  justify-content: center;
 }

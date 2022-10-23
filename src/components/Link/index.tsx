@@ -11,11 +11,22 @@ const Link = ({ children, isCenter, ...props }: LinkProps) => {
   return (
     <div
       className={`${styles.wrapperLink} ${
-        isCenter === undefined || isCenter === true ? styles.center : ''
+        isCenter === undefined || isCenter === true
+          ? styles.center
+          : styles.notCenter
       }`}
     >
-      <a className={styles.link} target="_blank" {...props}>
-        {children} <span>&#8811;</span>
+      <a
+        className={`${styles.link} ${
+          isCenter === undefined || isCenter === true
+            ? styles.center
+            : styles.notCenter
+        }`}
+        target="_blank"
+        {...props}
+      >
+        {children}
+        {(isCenter === undefined || isCenter === true) && <span>&#8811;</span>}
       </a>
     </div>
   );

@@ -3,10 +3,6 @@
   padding: 1.4rem 0;
 }
 
-.center {
-  justify-content: center;
-}
-
 .link {
   display: flex;
   align-items: center;
@@ -22,4 +18,13 @@
     margin: 0 0.25rem;
     -webkit-text-stroke-width: thin;
   }
+}
+
+.center {
+  justify-content: center;
+}
+
+.notCenter {
+  text-transform: none;
+  padding: 0;
 }
