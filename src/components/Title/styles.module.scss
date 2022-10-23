@@ -5,6 +5,10 @@
 
   padding: 2rem 0;
 
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+
   h1 {
     font-weight: 600;
     text-transform: uppercase;

@@ -5,6 +5,10 @@
   gap: 3rem;
 
   padding: 3rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .imageBottom {
