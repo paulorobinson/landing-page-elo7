@@ -5,7 +5,7 @@ import Title from '../Title';
 
 import styles from './styles.module.scss';
 
-interface JobProps {
+interface JobAPIProps {
   ativa: boolean;
   cargo: string;
   link: string;
@@ -18,15 +18,33 @@ interface LocationProps {
   pais: string;
 }
 
+interface JobProps {
+  ativa: boolean;
+  cargo: string;
+  link: string;
+  localizacao: string;
+}
+
 const JobsFooter = () => {
   const [jobs, setJobs] = useState<JobProps[]>([]);
 
   useEffect(() => {
     api
       .get('/')
-      .then(({ data }) =>
-        setJobs(data.vagas.filter((job: JobProps) => job.ativa === true))
-      )
+      .then(({ data }) => {
+        const filteredActiveJobs = data.vagas.filter(
+          (job: JobAPIProps) => job.ativa === true
+        );
+
+        const setLocation = filteredActiveJobs.map((job: JobAPIProps) => {
+          const existLocation = !job.localizacao
+            ? 'Remoto'
+            : `${job.localizacao?.bairro} - ${job.localizacao?.cidade}, ${job.localizacao?.pais}`;
+
+          return { ...job, localizacao: existLocation };
+        });
+        setJobs(setLocation);
+      })
       .catch((err) => console.log(err));
   }, []);
 
@@ -34,18 +52,16 @@ const JobsFooter = () => {
     <section className={styles.container}>
       <Title>Vagas em Aberto</Title>
       <Title isCenter={false}>Desenvolvimento</Title>
-      {jobs.map((job, index) => (
-        <div key={index} className={styles.jobsList}>
-          <Link href={job.link} isCenter={false}>
-            {job.cargo}
-          </Link>
-          {job.localizacao?.bairro ? (
-            <h3>{`${job.localizacao?.bairro} - ${job.localizacao?.cidade}, ${job.localizacao?.pais}`}</h3>
-          ) : (
-            <h3>{`Remoto`}</h3>
-          )}
-        </div>
-      ))}
+      <ul>
+        {jobs.map((job, index) => (
+          <li key={index} className={styles.jobsList}>
+            <Link href={job.link} isCenter={false}>
+              {job.cargo}
+            </Link>
+            <h3>{job.localizacao}</h3>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 };
