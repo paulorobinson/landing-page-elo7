@@ -12,7 +12,7 @@ const Card = ({ image, title, description }: CardProps) => {
       <div className={styles.header}>
         <img src={image} alt="" />
       </div>
-      <h1 className={styles.title}>{title}</h1>
+      <h2 className={styles.title}>{title}</h2>
       <div className={styles.description}>
         <p>{description}</p>
       </div>

@@ -7,12 +7,14 @@ import JobsFooter from '../../components/JobsFooter';
 
 const Home = () => {
   return (
-    <main className={styles.container}>
+    <div className={styles.container}>
       <Header />
-      <Team />
-      <Benefits />
-      <JobsFooter />
-    </main>
+      <main>
+        <Team />
+        <Benefits />
+        <JobsFooter />
+      </main>
+    </div>
   );
 };
 

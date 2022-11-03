@@ -13,9 +13,11 @@ const Team = () => {
         </a>
 
         <div className={styles.aboutDescription}>
-          <h1>Palavra do CEO</h1>
-          <h2>Carlos Curioni</h2>
-          <p>
+          <header>
+            <h2>Palavra do CEO</h2>
+            <p>Carlos Curioni</p>
+          </header>
+          <p className={styles.description}>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum autem
             temporibus quasi molestiae delectus optio rerum nihil amet. Sunt
             impedit non cupiditate quos, deserunt nobis deleniti ducimus
