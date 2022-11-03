@@ -1,3 +1,5 @@
+@import '../../styles/sizes.scss';
+
 .container {
   width: 100%;
 
@@ -5,11 +7,11 @@
 
   padding: 2rem 0;
 
-  @media (max-width: 768px) {
+  @media (max-width: $sm) {
     justify-content: center;
   }
 
-  h1 {
+  h2 {
     font-weight: 600;
     text-transform: uppercase;
     text-align: center;
